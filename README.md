@@ -33,7 +33,7 @@ It will accept anything that new Date() accepts to construct a date.
 This component was meant to be used in spanish but as you may see in the code, you can pass **shortMonths**, **days** and **months** to change the labels. 
 Days start at monday. All three props are an array of strings with the appropiate length like 12 months and 7 days. Not much error checking there so I don't know what happens if you pass a longer or shorter array. Feel free to try!
 ```svelte
-<Picker shortMonths={["Jan", "Feb", "Mar"]} days={["M", "T", "W", "T", "F", "S", "S"]} /
+<Picker months={["January", "February", ...]} shortMonths={["Jan", "Feb", "Mar", ...]} days={["M", "T", "W", "T", "F", "S", "S"]} /
 ```
 
 ### icon
