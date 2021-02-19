@@ -1,6 +1,6 @@
 # calendar-picker-svelte
 
-Calendar Picker with no dependencies. Download the .svelte file or copy-paste it into your component.
+Calendar Picker with no dependencies. Download the .svelte file or copy-paste it the code into your own file.
 
 ## Usage ##
 ```svelte
