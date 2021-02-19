@@ -4,8 +4,8 @@
 	export let value = undefined
 	export let valueString = ''
 	export let iconStyle = '', dateStyle = ""
-	export let width = "auto"
 	export let init = true
+	export let placeholder = "mm/dd/yyyy"
 	let fade = false
 	let val = undefined, main = undefined
 	let monthPicker = false
@@ -187,7 +187,6 @@
 	function hoist(node){
 		document.body.append(node)
 	}
-
 </script>
 
 <style>
@@ -286,7 +285,8 @@
 		background-color: #e0f7f7 !important;
 	}
 	main {
-		
+		width: auto;
+		box-sizing: border-box;
 		display: block;
 		position: relative;
 	}
@@ -342,8 +342,11 @@
 	<main bind:this={main} belongs={id} style={mainStyle}>
 	<div belongs={id} class="button" on:click={() => (open = !open)}>
 
-		<slot name="icon></slot>
-		<span class="date" style={dateStyle} belongs={id}>{val ? getDate(val, false) : "dd/mm/yyyy"}</span>
+		<span on:click={() => (open = !open)}>
+			<slot name="icon"></slot>
+		</span>
+		
+		<span class="date" style={dateStyle} belongs={id}>{val ? getDate(val, false) : placeholder}</span>
 
 		<!-- 		{d} de {months[m]} del {y} -->
 	</div>
